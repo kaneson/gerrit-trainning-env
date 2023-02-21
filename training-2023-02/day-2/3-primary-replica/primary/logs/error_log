@@ -1,0 +1,38 @@
+[2023-02-21T16:15:49.204Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SshCommandStart' queue
+[2023-02-21T16:15:50.476Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SSH-Stream-Worker' queue
+[2023-02-21T16:15:50.484Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SSH-Interactive-Worker' queue
+[2023-02-21T16:15:50.487Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SSH-Batch-Worker' queue
+[2023-02-21T16:15:50.491Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'MigrateExternalIdCase' queue
+[2023-02-21T16:15:50.532Z] [main] WARN  com.google.gerrit.server.config.GitwebCgiConfig : gitweb not installed (no /usr/lib/cgi-bin/gitweb.cgi found)
+[2023-02-21T16:15:52.699Z] [main] INFO  org.eclipse.jetty.util.log : Logging initialized @17758ms to org.eclipse.jetty.util.log.Slf4jLog
+[2023-02-21T16:15:53.162Z] [main] INFO  com.google.gerrit.server.git.SystemReaderInstaller : Set JGit's SystemReader to read system config from /var/gerrit/etc/jgit.config
+[2023-02-21T16:15:53.177Z] [main] INFO  com.google.gerrit.server.git.LocalDiskRepositoryManager : Defaulting core.streamFileThreshold to 486m
+[2023-02-21T16:15:54.191Z] [main] WARN  com.google.gerrit.server.project.PeriodicProjectListCacheWarmer : project_list cache warmer is disabled
+[2023-02-21T16:15:54.203Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loading plugins from /var/gerrit/plugins
+[2023-02-21T16:15:54.350Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin codemirror-editor, version v3.6.3
+[2023-02-21T16:15:54.449Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin commit-message-length-validator, version v3.7.0
+[2023-02-21T16:15:54.674Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin delete-project, version v3.6.3
+[2023-02-21T16:15:54.765Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin download-commands, version v3.7.0
+[2023-02-21T16:15:54.874Z] [main] INFO  com.google.gerrit.server.config.FileBasedGlobalPluginConfigProvider : No /var/gerrit/etc/gitiles.config; assuming defaults
+[2023-02-21T16:15:54.934Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin gitiles, version v3.7.0
+[2023-02-21T16:15:55.005Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin hooks, version v3.7.0
+[2023-02-21T16:15:55.073Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin plugin-manager, version v3.7.0
+[2023-02-21T16:15:55.081Z] [plugin-manager-preloader] INFO  com.googlesource.gerrit.plugins.manager.OnStartStop : Start-up: pre-loading list of plugins from registry
+[2023-02-21T16:15:55.365Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin replication, version v3.7.0
+[2023-02-21T16:15:55.419Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin reviewnotes, version v3.7.0-1-g10db2cf
+[2023-02-21T16:15:55.493Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin singleusergroup, version v3.7.0
+[2023-02-21T16:15:55.667Z] [WorkQueue-1[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@2a918470[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@1bc0388a[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@194a5552]]]] INFO  com.googlesource.gerrit.plugins.deleteproject.fs.RepositoryCleanupTask : Cleaning up expired git repositories...
+[2023-02-21T16:15:55.698Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin webhooks, version v3.7.0
+[2023-02-21T16:15:55.717Z] [main] INFO  com.google.gerrit.server.config.ScheduleConfig : No schedule configuration for "accountDeactivation".
+[2023-02-21T16:15:55.759Z] [WorkQueue-1[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@2a918470[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@1bc0388a[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@194a5552]]]] INFO  com.googlesource.gerrit.plugins.deleteproject.fs.RepositoryCleanupTask : Cleaning up expired git repositories... Done
+[2023-02-21T16:15:55.788Z] [main] INFO  com.google.gerrit.sshd.SshDaemon : Started Gerrit APACHE-SSHD-2.8.0 on *:29418
+[2023-02-21T16:15:55.792Z] [main] INFO  org.eclipse.jetty.server.Server : jetty-9.4.36.v20210114; built: 2021-01-14T16:44:28.689Z; git: 238ec6997c7806b055319a6d11f8ae7564adc0de; jvm 11.0.18+10-LTS
+[2023-02-21T16:15:55.905Z] [main] INFO  org.eclipse.jetty.server.session : DefaultSessionIdManager workerName=node0
+[2023-02-21T16:15:55.905Z] [main] INFO  org.eclipse.jetty.server.session : No SessionScavenger set, using defaults
+[2023-02-21T16:15:55.907Z] [main] INFO  org.eclipse.jetty.server.session : node0 Scavenging every 660000ms
+[2023-02-21T16:15:56.087Z] [main] INFO  com.googlesource.gerrit.plugins.gitiles.HttpModule : No /var/gerrit/etc/gitiles.config; assuming defaults
+[2023-02-21T16:15:57.125Z] [main] INFO  org.eclipse.jetty.server.handler.ContextHandler : Started o.e.j.s.ServletContextHandler@18ad543b{/,null,AVAILABLE}
+[2023-02-21T16:15:57.148Z] [main] INFO  org.eclipse.jetty.server.AbstractConnector : Started ServerConnector@1226ba98{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[2023-02-21T16:15:57.150Z] [main] INFO  org.eclipse.jetty.server.Server : Started @22211ms
+[2023-02-21T16:15:57.152Z] [main] INFO  com.google.gerrit.pgm.Daemon : Gerrit Code Review 3.6.3-69-g0dee511269 ready
+[2023-02-21T16:16:23.484Z] [plugin-manager-preloader] INFO  com.googlesource.gerrit.plugins.manager.OnStartStop : 90 plugins successfully pre-loaded

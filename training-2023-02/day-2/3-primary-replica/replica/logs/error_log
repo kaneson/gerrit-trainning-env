@@ -1,0 +1,43 @@
+[2023-02-21T16:15:42.630Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SshCommandStart' queue
+[2023-02-21T16:15:44.092Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SSH-Stream-Worker' queue
+[2023-02-21T16:15:44.095Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SSH-Interactive-Worker' queue
+[2023-02-21T16:15:44.099Z] [main] INFO  com.google.gerrit.server.git.WorkQueue : Adding metrics for 'SSH-Batch-Worker' queue
+[2023-02-21T16:15:44.140Z] [main] WARN  com.google.gerrit.server.config.GitwebCgiConfig : gitweb not installed (no /usr/lib/cgi-bin/gitweb.cgi found)
+[2023-02-21T16:15:44.565Z] [main] INFO  org.eclipse.jetty.util.log : Logging initialized @15340ms to org.eclipse.jetty.util.log.Slf4jLog
+[2023-02-21T16:15:45.013Z] [main] INFO  com.google.gerrit.server.git.SystemReaderInstaller : Set JGit's SystemReader to read system config from /var/gerrit/etc/jgit.config
+[2023-02-21T16:15:45.033Z] [main] INFO  com.google.gerrit.server.git.LocalDiskRepositoryManager : Defaulting core.streamFileThreshold to 486m
+[2023-02-21T16:15:46.011Z] [main] WARN  com.google.gerrit.server.project.PeriodicProjectListCacheWarmer : project_list cache warmer is disabled
+[2023-02-21T16:15:46.054Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loading plugins from /var/gerrit/plugins
+[2023-02-21T16:15:46.470Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin codemirror-editor, version v3.6.3
+[2023-02-21T16:15:46.742Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin commit-message-length-validator, version v3.7.0
+[2023-02-21T16:15:47.335Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin delete-project, version v3.6.3
+[2023-02-21T16:15:47.618Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin download-commands, version v3.7.0
+[2023-02-21T16:15:47.756Z] [main] INFO  com.google.gerrit.server.config.FileBasedGlobalPluginConfigProvider : No /var/gerrit/etc/gitiles.config; assuming defaults
+[2023-02-21T16:15:47.834Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin gitiles, version v3.7.0
+[2023-02-21T16:15:47.977Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin hooks, version v3.7.0
+[2023-02-21T16:15:48.172Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin plugin-manager, version v3.7.0
+[2023-02-21T16:15:48.171Z] [plugin-manager-preloader] INFO  com.googlesource.gerrit.plugins.manager.OnStartStop : Start-up: pre-loading list of plugins from registry
+[2023-02-21T16:15:48.339Z] [WorkQueue-1[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@707169ac[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@41fa2d7a[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@4935a2e4]]]] INFO  com.googlesource.gerrit.plugins.deleteproject.fs.RepositoryCleanupTask : Cleaning up expired git repositories...
+[2023-02-21T16:15:48.408Z] [WorkQueue-1[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@707169ac[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@41fa2d7a[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@4935a2e4]]]] INFO  com.googlesource.gerrit.plugins.deleteproject.fs.RepositoryCleanupTask : Cleaning up expired git repositories... Done
+[2023-02-21T16:15:48.623Z] [main] WARN  com.googlesource.gerrit.plugins.replication.DestinationConfigParser : Replication config does not exist or it's empty; not replicating
+[2023-02-21T16:15:48.695Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin replication, version v3.7.0
+[2023-02-21T16:15:48.891Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin reviewnotes, version v3.7.0-1-g10db2cf
+[2023-02-21T16:15:49.012Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin singleusergroup, version v3.7.0
+[2023-02-21T16:15:49.277Z] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin webhooks, version v3.7.0
+[2023-02-21T16:15:49.538Z] [main] INFO  com.google.gerrit.server.group.PeriodicGroupIndexer : Run group indexer, 0 groups reindexed
+[2023-02-21T16:15:49.540Z] [main] INFO  com.google.gerrit.server.config.ScheduleConfig : No schedule configuration for "index.scheduledIndexer".
+[2023-02-21T16:15:49.619Z] [main] INFO  com.google.gerrit.sshd.SshDaemon : Started Gerrit APACHE-SSHD-2.8.0 on *:29418
+[2023-02-21T16:15:49.634Z] [main] INFO  org.eclipse.jetty.server.Server : jetty-9.4.36.v20210114; built: 2021-01-14T16:44:28.689Z; git: 238ec6997c7806b055319a6d11f8ae7564adc0de; jvm 11.0.18+10-LTS
+[2023-02-21T16:15:49.795Z] [main] INFO  org.eclipse.jetty.server.session : DefaultSessionIdManager workerName=node0
+[2023-02-21T16:15:49.803Z] [main] INFO  org.eclipse.jetty.server.session : No SessionScavenger set, using defaults
+[2023-02-21T16:15:49.817Z] [main] INFO  org.eclipse.jetty.server.session : node0 Scavenging every 600000ms
+[2023-02-21T16:15:50.023Z] [main] INFO  com.googlesource.gerrit.plugins.gitiles.HttpModule : No /var/gerrit/etc/gitiles.config; assuming defaults
+[2023-02-21T16:15:53.744Z] [main] INFO  org.eclipse.jetty.server.handler.ContextHandler : Started o.e.j.s.ServletContextHandler@2338eeef{/,null,AVAILABLE}
+[2023-02-21T16:15:53.773Z] [main] INFO  org.eclipse.jetty.server.AbstractConnector : Started ServerConnector@79080255{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[2023-02-21T16:15:53.775Z] [main] INFO  org.eclipse.jetty.server.Server : Started @24551ms
+[2023-02-21T16:15:53.778Z] [main] INFO  com.google.gerrit.pgm.Daemon : Gerrit Code Review [replica] [headless] 3.6.3-69-g0dee511269 ready
+[2023-02-21T16:16:18.360Z] [plugin-manager-preloader] INFO  com.googlesource.gerrit.plugins.manager.OnStartStop : 90 plugins successfully pre-loaded
+[2023-02-21T16:20:00.046Z] [WorkQueue-2[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@1dbd9430[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@1745ff40[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@198203d8]]]] INFO  com.google.gerrit.server.index.group.GroupIndexerImpl : Reindexing stale document StalenessCheckResult{isStale=true, reason=Optional[Document missing in index, but found Ref[refs/groups/7a/7a0592ddbb294ef6c7c2c1beb572924dba515eeb=bacc918acd6cf5fb3d1a5f1eb0ed9ac88687b2c5(-1)] in the repo]}
+[2023-02-21T16:20:00.249Z] [WorkQueue-2[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@1dbd9430[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@1745ff40[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@198203d8]]]] INFO  com.google.gerrit.server.index.group.GroupIndexerImpl : Reindexing stale document StalenessCheckResult{isStale=true, reason=Optional[Document missing in index, but found Ref[refs/groups/03/03de98adbcfbbf6e4b6b17f5d547e7ba4873a02d=aeb0a57718c3e90efada66228f643007a658624f(-1)] in the repo]}
+[2023-02-21T16:20:00.301Z] [WorkQueue-2[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@1dbd9430[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@1745ff40[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@198203d8]]]] INFO  com.google.gerrit.server.group.PeriodicGroupIndexer : Run group indexer, 4 groups reindexed
+[2023-02-21T16:25:00.021Z] [WorkQueue-2[java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@1dbd9430[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@1745ff40[Wrapped task = com.google.gerrit.server.logging.LoggingContextAwareRunnable@198203d8]]]] INFO  com.google.gerrit.server.group.PeriodicGroupIndexer : Run group indexer, 0 groups reindexed

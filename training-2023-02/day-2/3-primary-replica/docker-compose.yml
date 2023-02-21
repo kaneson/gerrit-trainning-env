@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  primary:
+    build: gerrit
+    ports:
+      - 8080:8080
+      - 29418:29418
+    volumes:
+      - ./primary/etc:/var/gerrit/etc:rw
+      - ./primary/logs:/var/gerrit/logs:rw
+      - ./replication_ssh_keys/replication_user_id_rsa:/home/gerrit/.ssh/id_rsa:rw
+      - ./ssh/config:/home/gerrit/.ssh/config:rw
+      - ./replica/git:/var/gerrit/git-replica:rw      
+  replica:
+      build: gerrit
+      ports:
+        - 8081:8080
+        - 29419:29418
+      volumes:
+        - ./replica/etc:/var/gerrit/etc:rw
+        - ./replica/logs:/var/gerrit/logs:rw
+        - ./replica/git:/var/gerrit/git:rw

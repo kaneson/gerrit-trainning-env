@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  gerrit:
+    build: .
+    ports:
+      - 8080:8080
+      - 29418:29418
+    volumes:
+      - gerrit-cache:/var/gerrit/cache:rw
+      - gerrit-db:/var/gerrit/db:rw
+      - gerrit-git:/var/gerrit/git:rw
+      - gerrit-index:/var/gerrit/index:rw
+      - gerrit-logs:/var/gerrit/logs:rw
+      - gerrit-etc:/var/gerrit/etc:rw
+    privileged: true
+volumes:
+  gerrit-cache:
+  gerrit-db:
+  gerrit-git:
+  gerrit-index:
+  gerrit-logs:
+  gerrit-etc:
