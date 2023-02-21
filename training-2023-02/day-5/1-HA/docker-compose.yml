@@ -1,0 +1,39 @@
+version: '3.9'
+services:
+  prometheus:
+    build: prometheus
+    depends_on:
+      - primary1
+      - primary2
+    ports:
+      - 9090:9090
+  haproxy:
+    build: haproxy
+    depends_on:
+      - primary1
+      - primary2
+    ports:
+      - 8080:8080
+      - 29418:29418
+    volumes:
+      - ./primary1/etc:/var/gerrit/etc:rw
+  primary1:
+    build: gerrit
+    ports:
+      - 8181:8080
+      - 29518:29418
+    volumes:
+      - ./primary1/etc:/var/gerrit/etc:rw
+      - ./primary1/logs:/var/gerrit/logs:rw
+      - ./websessions:/var/gerrit/websessions:rw
+      - ./sharedgit:/var/gerrit/git:rw
+  primary2:
+    build: gerrit
+    ports:
+      - 8282:8080
+      - 29618:29418
+    volumes:
+      - ./primary2/etc:/var/gerrit/etc:rw
+      - ./primary2/logs:/var/gerrit/logs:rw
+      - ./websessions:/var/gerrit/websessions:rw
+      - ./sharedgit:/var/gerrit/git:rw

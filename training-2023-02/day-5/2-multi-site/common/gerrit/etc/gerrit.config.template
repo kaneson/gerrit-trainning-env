@@ -1,0 +1,53 @@
+[gerrit]
+	basePath = git
+	canonicalWebUrl = ${CANONICAL_WEB_URL}
+	serverId = ${GERRIT_SERVER_ID}
+	instanceId = ${GERRIT_INSTANCE_ID}
+
+	installDbModule = com.googlesource.gerrit.plugins.multisite.GitModule
+	installModule = com.googlesource.gerrit.plugins.multisite.Module
+	installModule = com.gerritforge.gerrit.eventbroker.BrokerApiModule
+[database]
+	type = h2
+	#database = db/ReviewDB
+[index]
+	type = LUCENE
+[auth]
+    type = DEVELOPMENT_BECOME_ANY_ACCOUNT
+[sendemail]
+    enable = false
+[sshd]
+	listenAddress = *:29418
+[httpd]
+	listenUrl = http://*:8080/
+	requestLog = true
+[cache]
+	directory = cache
+[plugins]
+	allowRemoteAdmin = true
+[container]
+	user = gerrit
+	javaOptions = "-Dflogger.backend_factory=com.google.common.flogger.backend.log4j.Log4jBackendFactory#getInstance"
+	javaOptions = "-Dflogger.logging_context=com.google.gerrit.server.logging.LoggingContext#getInstance"
+	javaOptions = -Djava.security.egd=file:/dev/./urandom
+	javaOptions = --add-opens java.base/java.net=ALL-UNNAMED
+	javaOptions = --add-opens java.base/java.lang.invoke=ALL-UNNAMED
+#	javaOptions = "-Djavax.net.debug=ssl,handshake" # Enable this for SSL debug
+[receive]
+	enableSignedPush = false
+[plugin "events-aws-kinesis"]
+    numberOfSubscribers = 6
+    pollingIntervalMs = 1000
+    region = us-east-1
+    endpoint = http://kinesis:4566
+    applicationName = ${GERRIT_INSTANCE_ID}
+    initialPosition = trim_horizon
+[plugin "metrics-reporter-prometheus"]
+    prometheusBearerToken = token
+[plugin "javamelody"]
+    prometheusBearerToken = token
+[plugin "aws-dynamodb-refdb"]
+    region = us-east-1
+    endpoint = http://kinesis:4566
+    locksTableName = locks
+    refsDbTableName = refsDb

@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+
+  review-uk:
+    image: "nokia/gerrit:${IMAGE_TAG}"
+    container_name: review-uk
+    hostname: review-uk
+    domainname: gerrit-test.uk
+    networks:
+      gerrit-test.uk:
+    env_file: ./setup.env
+    volumes:
+      - "./gerrit-etc:/var/gerrit/etc"
+      - "./gerrit-git:/var/gerrit/git"
+      - "./gerrit-db:/var/gerrit/db"
+      - "./gerrit-data:/var/gerrit/data"
+      - "./gerrit-index:/var/gerrit/index"
+      - "./gerrit-cache:/var/gerrit/cache"
+      - "./gerrit-logs:/var/gerrit/logs"
+    ports:
+      - "${GERRIT_SSHD_LISTEN_PORT}:29418"
+      - "${GERRIT_HTTPD_LISTEN_PORT}:8080"
+
+  ssh-uk:
+    image: "nokia/git-ssh:${DESCRIBE_HEAD}"
+    container_name: ssh-uk
+    hostname: ssh-uk
+    domainname: gerrit-test.uk
+    networks:
+      gerrit-test.uk:
+    volumes:
+      - "./gerrit-git:/var/gerrit/git"
+
+  git-daemon-uk:
+    image: "nokia/git-daemon:${DESCRIBE_HEAD}"
+    container_name: git-daemon-uk
+    hostname: git-daemon-uk
+    domainname: gerrit-test.uk
+    networks:
+      gerrit-test.uk:
+    volumes:
+      - "./gerrit-git:/var/gerrit/git"
+
+networks:
+  gerrit-test.uk:
+    external: true
+    name: gerrit-test.uk

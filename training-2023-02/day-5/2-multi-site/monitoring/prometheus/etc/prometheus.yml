@@ -1,0 +1,21 @@
+global:
+  scrape_interval:     10s
+  evaluation_interval: 10s
+
+scrape_configs:
+  # Review UK #
+  - job_name: prometheus-exporter
+    static_configs:
+      - targets: ['review-uk.gerrit-test.uk:8080','review-kr.gerrit-test.uk:8080']
+    metrics_path: '/plugins/metrics-reporter-prometheus/metrics'
+    params:
+      format: ['prometheus']
+    bearer_token: token
+
+  - job_name: review-javamelody
+    static_configs:
+      - targets: ['review-uk.gerrit-test.uk:8080','review-kr.gerrit-test.uk:8080']
+    metrics_path: '/monitoring'
+    params:
+      format: ['prometheus']
+    bearer_token: token

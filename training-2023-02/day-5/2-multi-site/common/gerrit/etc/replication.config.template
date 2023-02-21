@@ -1,0 +1,19 @@
+[replication]
+  lockErrorMaxRetries = 30
+  maxRetries = 30
+
+[gerrit]
+  autoReload = true
+  replicateOnStartup = false
+
+[remote "${REMOTE_TARGET_LABEL}"]
+  url = git://${REMOTE_TARGET_REPLICATION_GIT_HOST}:9418/${DOLLAR}{name}.git
+  adminUrl = ssh://gerrit@${REMOTE_TARGET_REPLICATION_ADMIN_HOST}:1022/var/gerrit/git/${DOLLAR}{name}.git
+  mirror = true
+  push = +refs/*:refs/*
+  threads = 10
+  createMissingRepositories = true
+  replicateProjectDeletions = true
+  replicateHiddenProjects = true
+  timeout = 60
+  rescheduleDelay = 15

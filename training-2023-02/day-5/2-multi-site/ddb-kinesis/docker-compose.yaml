@@ -1,0 +1,20 @@
+version: '3'
+services:
+  kinesis:
+    image: localstack/localstack:0.14.5
+    ports:
+      - "4566:4566"
+      - "4751:4751"
+    environment:
+      SERVICES: dynamodb,cloudwatch,kinesis
+      AWS_REGION: us-east-1
+      KINESIS_INITIALIZE_STREAMS: gerrit_batch_index:1,gerrit_cache_eviction:1,gerrit_index:1,gerrit_list_project:1,gerrit_stream:1,gerrit_web_session:1,gerrit:1
+      USE_SSL: "true"
+    networks:
+      gerrit-test.uk:
+
+
+networks:
+  gerrit-test.uk:
+    external: true
+    name: gerrit-test.uk

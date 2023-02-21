@@ -1,0 +1,5 @@
+Host *
+	IdentityFile /var/gerrit/.ssh/id_rsa
+	Port 1022
+	StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null

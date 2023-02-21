@@ -1,0 +1,11 @@
+[index]
+  maxTries = 6
+  retryInterval = 30000
+  numStripedLocks = 100
+
+[broker]
+        indexEventTopic = gerrit_index
+        batchIndexEventTopic = gerrit_batch_index
+        streamEventTopic = gerrit_stream
+        projectListEventTopic = gerrit_list_project
+        cacheEventTopic = gerrit_cache_eviction
